@@ -1,25 +1,11 @@
-<<<<<<< HEAD
 flask==3.1.1
 gunicorn
 
 langchain==0.3.26
 langchain-community==0.3.26
-langchain-pinecone==0.2.8
-=======
-flask==3.1.1 
-gunicorn
-langchain==0.3.26
-langchain-community==0.3.26
-sentence-transformers==4.1.0
-pypdf==5.6.1 
-python-dotenv==1.1.0
-langchain-pinecone==0.2.8 
->>>>>>> 67c59ef583ce860bdef20fa23e98ab4b3ad59b8a
 langchain-groq==0.3.0
 langchain-huggingface==0.3.1
-
+langchain-pinecone==0.2.8
 
 pypdf==5.6.1
 python-dotenv==1.1.0
-
-torch
