@@ -1,5 +1,11 @@
 # End-to-End-MedChat-using-RAG
 
+---
+
+![MedChat Demo](assets/medchat_demo.png)
+
+---
+
 Tech Stack: Python, LLaMA3-70B, RAG, PineCone, Hugging Face , LangChain
 
 ---
