@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 from src.prompt import *
 import os
 
-# Load environment variables
+# Load env variables
 load_dotenv()
 PINECONE_API_KEY = os.environ.get("PINECONE_API_KEY")
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
@@ -21,36 +21,27 @@ vector_store = PineconeVectorStore.from_existing_index(
     index_name=index_name,
     embedding=embeddings
 )
-
 retriever = vector_store.as_retriever(search_type="similarity", search_kwargs={"k": 3})
 
-# Initialize model
+# Initialize model and chains
 model = ChatGroq(model="llama-3.1-8b-instant")
-
-# Prompt setup
-prompt = ChatPromptTemplate(
-    [
-        ("system", system_prompt),
-        ("human", "{input}")
-    ]
-)
-
+prompt = ChatPromptTemplate([("system", system_prompt), ("human", "{input}")])
 question_answer_chain = create_stuff_documents_chain(model, prompt)
 rag_chain = create_retrieval_chain(retriever, question_answer_chain)
 
-# Function to handle user input
-def chat(msg):
-    response = rag_chain.invoke({"input": msg})
-    return response['answer']
+# Gradio chat function
+def chat(history, user_message):
+    response = rag_chain.invoke({"input": user_message})
+    history.append((user_message, response['answer']))
+    return history, ""
 
-# Gradio Interface
-iface = gr.Interface(
+# Gradio interface
+iface = gr.ChatInterface(
     fn=chat,
-    inputs=gr.Textbox(lines=2, placeholder="Type your question here..."),
-    outputs="text",
-    title="MedChat",
-    description="Ask medical-related questions and get AI-powered responses."
+    title="Medical Chatbot",
+    description="Ask medical questions and get AI-powered responses.",
+    theme="default"
 )
 
-if __name__ == "__main__":
-    iface.launch()
+# Launch app
+iface.launch()
