@@ -7,8 +7,8 @@ from langchain_pinecone import PineconeVectorStore
 from dotenv import load_dotenv
 import os
 
-from embeddings import download_embeddings
-from systemPrompt import system_prompt
+from src.helper import download_embeddings
+from src.prompt import *
 
 app = Flask(__name__)
 load_dotenv()
