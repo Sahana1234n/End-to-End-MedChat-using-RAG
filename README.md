@@ -71,14 +71,12 @@ The system combines vector-based document retrieval with a large language model 
 ---
 
 ## Load it in Python:
-
 from dotenv import load_dotenv
 load_dotenv()
 
 ---
 
 ## Running the App
-
 python app.py
 Open your browser at http://127.0.0.1:8000 for the chatbot interface.
 
