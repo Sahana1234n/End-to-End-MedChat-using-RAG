@@ -4,14 +4,14 @@ Tech Stack: Python, LLaMA3-70B, RAG, PineCone, Hugging Face , LangChain
 
 ---
 
-**Project Overview
+## Project Overview
 
 MedChat is an intelligent Generative AI medical chatbot that answers medical queries using a Retrieval-Augmented Generation (RAG) pipeline. It is trained on 10K+ medical entries from textbooks and verified medical sources to ensure high factual accuracy.
 The system combines vector-based document retrieval with a large language model (LLaMA3-70B) reasoning layer to generate coherent and medically validated responses.
 
 ---
 
-** Features
+## Features
 
 ✅ Answer medical questions with high factual consistency.
 
@@ -25,7 +25,7 @@ The system combines vector-based document retrieval with a large language model 
 
 ---
 
-** Architecture
+## Architecture
 
 - Data Ingestion : Load and preprocess medical text from textbooks and other sources.
 
@@ -35,7 +35,7 @@ The system combines vector-based document retrieval with a large language model 
 
 ---
 
-** Installation
+## Installation
 
 1. Clone the repository:
    - git clone <your-repo-url>
@@ -57,21 +57,21 @@ The system combines vector-based document retrieval with a large language model 
 
 ---
 
-** Environment Variables
+## Environment Variables
 - Create a .env file in the project root with your API keys and config. Example:
 - PINECONE_API_KEY = "xxxxxxxxxxxxxxxxxxxxx"
 - GROQ_API_KEY = "xxxxxxxxxxxxxxxxxxx"
 
 ---
 
-** Load it in Python:
+## Load it in Python:
 
 from dotenv import load_dotenv
 load_dotenv()
 
 ---
 
-** Running the App
+## Running the App
 
 python app.py
 Open your browser at http://127.0.0.1:8000 for the chatbot interface.
