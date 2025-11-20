@@ -2,7 +2,7 @@
 
 ---
 
-![MedChat Demo](assets/medchat_demo.png)
+![MedChat Demo](assets/medchat.png)
 
 ---
 
