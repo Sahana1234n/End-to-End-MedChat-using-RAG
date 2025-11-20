@@ -1,12 +1,16 @@
 # End-to-End-MedChat-using-RAG
 
 Tech Stack: Python, LLaMA3-70B, RAG, PineCone, Hugging Face , LangChain
---
-Project Overview
 
-MedChat is an intelligent Generative AI medical chatbot that answers medical queries using a Retrieval-Augmented Generation (RAG) pipeline. It is trained on The Gale Encyclopedia of Alternative Medicinel sources to ensure high factual accuracy.
-The system combines vector-based document retrieval with a large language model (LLaMA3-70B) reasoning layer to generate coherent and medically validated responses.
 --
+
+**Project Overview
+
+MedChat is an intelligent Generative AI medical chatbot that answers medical queries using a Retrieval-Augmented Generation (RAG) pipeline. It is trained on 10K+ medical entries from textbooks and verified medical sources to ensure high factual accuracy.
+The system combines vector-based document retrieval with a large language model (LLaMA3-70B) reasoning layer to generate coherent and medically validated responses.
+
+--
+
 Features
 
 ✅ Answer medical questions with high factual consistency.
@@ -18,6 +22,7 @@ Features
 ✅ Generates responses that reference medical textbooks and verified sources.
 
 ✅ Can be deployed in AWS or Streamlit 
+
 --
 
 Architecture
